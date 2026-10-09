@@ -1,33 +1,112 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#f8f1e4">
 <title>Abhiram weds Vyshnavi | Wedding</title>
 <style>
 :root{--cream:#fbf5e9;--paper:#fffdf8;--green:#315b44;--gold:#b88a3d;--rose:#d99096;--muted:#707a72}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:linear-gradient(#fbf4e7,#fffdf8 35%,#fbf4e7);color:#35433a;font-family:Georgia,"Times New Roman",serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:62px;-webkit-text-size-adjust:100%}
+body{margin:0;overflow-x:hidden;width:100%;background:linear-gradient(#fbf4e7,#fffdf8 35%,#fbf4e7);color:#35433a;font-family:Georgia,"Times New Roman",serif;-webkit-tap-highlight-color:transparent}
 body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.13;background-image:radial-gradient(#b88a3d .6px,transparent .7px);background-size:19px 19px}
-.shell{max-width:1120px;margin:auto;padding:18px}.card{background:rgba(255,253,248,.96);border:1px solid #eadcc3;box-shadow:0 25px 80px rgba(67,48,27,.13);overflow:hidden}
-.hero{text-align:center;padding:12px}.hero img{display:block;width:min(100%,820px);margin:auto}.fallback{display:none;padding:70px 20px}.eyebrow{font:12px Arial;letter-spacing:.25em;text-transform:uppercase;color:var(--gold)}
-h1{font-size:clamp(42px,7vw,78px);font-weight:500;font-style:italic;color:var(--green);margin:12px 0}.weds{font-size:.35em;color:var(--gold);font-style:normal}
-.date{font-size:24px;color:var(--green);margin:15px}.venue{font-size:18px;color:#637066}
-.nav{position:sticky;top:0;z-index:5;background:#fffdf8ee;backdrop-filter:blur(10px);border-block:1px solid #eee1ca;display:flex;justify-content:center;gap:4px;overflow:auto}
-.nav a{padding:14px 11px;text-decoration:none;font:12px Arial;color:var(--green);white-space:nowrap;text-transform:uppercase;letter-spacing:.06em}
-.section{padding:66px 22px;text-align:center;max-width:980px;margin:auto}.section h2{color:var(--green);font-weight:500;letter-spacing:.05em}
-.section h2:after{content:"";display:block;width:72px;height:1px;background:var(--gold);margin:13px auto}.lead{max-width:700px;margin:auto;line-height:1.85;color:#68736b}.orn{color:var(--gold);font-size:21px;margin:10px}
-.actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:24px}.btn{padding:12px 20px;border:1px solid var(--green);border-radius:30px;text-decoration:none;font:14px Arial;color:var(--green)}.btn.primary{background:var(--green);color:white}.btn.gold{border-color:var(--gold);color:#8b682e}
-.timeline{max-width:760px;margin:30px auto;position:relative}.timeline:before{content:"";position:absolute;left:50%;top:0;bottom:0;width:1px;background:#dfcda8}
-.event{display:grid;grid-template-columns:1fr 60px 1fr;align-items:center;margin:22px 0}.dot{width:42px;height:42px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;background:#fffdf8;color:var(--gold);margin:auto;z-index:1}
-.box{padding:16px;background:#fff;border:1px solid #eadfc9}.box h3{margin:0 0 6px;color:var(--green);font-weight:500}.box p{margin:0;color:#6c756e;line-height:1.6;font-size:14px}
-.cards,.places,.contacts{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}.cards.three{grid-template-columns:repeat(3,1fr)}
-.info,.place,.contact{background:#fff;border:1px solid #eadfc9}.info{padding:24px 18px}.ico{font-size:28px;color:var(--gold)}.info h3{color:var(--green);font-weight:500;margin:10px}.info p,.place p{color:#6c756e;line-height:1.65;font-size:14px}
-.place{overflow:hidden;text-align:left}.visual{height:145px;background:linear-gradient(135deg,#dce9d7,#f5d8c9);display:grid;place-items:center;font-size:52px;color:var(--green)}.copy{padding:18px}.copy h3{margin:0 0 6px;color:var(--green);font-weight:500}.copy a{color:var(--gold);font:13px Arial;text-decoration:none}
-.location{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:30px}.mapbox{min-height:260px;padding:28px;background:linear-gradient(145deg,#eef3e8,#fff1e8);border:1px solid #eadfc9;display:grid;place-items:center}.pin{font-size:52px;color:var(--rose)}
-.contact{padding:18px;display:grid;grid-template-columns:86px 1fr;gap:16px;align-items:center;text-align:left}.photo{width:86px;height:86px;border-radius:50%;border:2px solid #e4cfa7;background:linear-gradient(145deg,#e8efdf,#f4d5ce);display:grid;place-items:center;color:var(--green);font-size:28px;font-weight:bold;overflow:hidden}.photo img{width:100%;height:100%;object-fit:cover;display:none}.name{font-size:20px;color:var(--green)}.role{font:12px Arial;color:#80877f;margin:5px 0 12px}.contact a{color:var(--gold);font:14px Arial;text-decoration:none;margin-right:12px}
-.note{font:12px Arial;color:#858d86;margin-top:18px}.footer{border-top:1px solid #eee1ca;text-align:center;padding:48px 20px;color:#778179}.names{font-size:23px;font-style:italic;color:var(--green)}
+.shell{max-width:1120px;margin:auto;padding:18px}
+.card{background:rgba(255,253,248,.96);border:1px solid #eadcc3;box-shadow:0 25px 80px rgba(67,48,27,.13);overflow:hidden}
+.hero{text-align:center;padding:12px}
+.hero img{display:block;width:min(100%,820px);height:auto;aspect-ratio:1056/1489;margin:auto;border-radius:6px}
+.fallback{display:none;padding:70px 20px}
+.eyebrow{font:12px Arial,sans-serif;letter-spacing:.25em;text-transform:uppercase;color:var(--gold)}
+h1{font-size:clamp(36px,7vw,78px);font-weight:500;font-style:italic;color:var(--green);margin:12px 0}
+.weds{font-size:.35em;color:var(--gold);font-style:normal}
+.date{font-size:clamp(18px,4.5vw,24px);color:var(--green);margin:12px 0}
+.venue{font-size:clamp(15px,3.8vw,18px);color:#637066}
+
+.nav{position:sticky;top:0;z-index:20;background:#fffdf8fa;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-block:1px solid #eee1ca;display:flex;justify-content:center;align-items:center;gap:6px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;-ms-overflow-style:none;padding:8px 12px}
+.nav::-webkit-scrollbar{display:none}
+.nav a{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:8px 14px;text-decoration:none;font:600 12px Arial,sans-serif;color:var(--green);white-space:nowrap;text-transform:uppercase;letter-spacing:.06em;border-radius:21px;transition:background-color .15s,color .15s}
+.nav a:hover,.nav a:active{background:rgba(49,91,68,.08)}
+
+.section{padding:60px 22px;text-align:center;max-width:980px;margin:auto;scroll-margin-top:62px}
+.section h2{color:var(--green);font-weight:500;letter-spacing:.05em;font-size:clamp(24px,5vw,34px);margin:0 0 10px}
+.section h2:after{content:"";display:block;width:72px;height:1px;background:var(--gold);margin:13px auto}
+.lead{max-width:700px;margin:auto;line-height:1.8;color:#68736b;font-size:clamp(15px,3.8vw,17px)}
+.orn{color:var(--gold);font-size:21px;margin:10px}
+
+.actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:24px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:12px 24px;border:1px solid var(--green);border-radius:30px;text-decoration:none;font:600 14px Arial,sans-serif;color:var(--green);transition:transform .1s,background-color .15s}
+.btn:active{transform:scale(.98)}
+.btn.primary{background:var(--green);color:#fff}
+.btn.gold{border-color:var(--gold);color:#8b682e;background:rgba(184,138,61,.06)}
+
+.timeline{max-width:760px;margin:30px auto;position:relative}
+.timeline:before{content:"";position:absolute;left:50%;top:0;bottom:0;width:1px;background:#dfcda8}
+.event{display:grid;grid-template-columns:1fr 60px 1fr;align-items:center;margin:24px 0}
+.dot{width:42px;height:42px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;background:#fffdf8;color:var(--gold);margin:auto;z-index:1;font-size:18px}
+.box{padding:18px 20px;background:#fff;border:1px solid #eadfc9;border-radius:8px;text-align:left}
+.box h3{margin:0 0 6px;color:var(--green);font-weight:500;font-size:18px}
+.box p{margin:0;color:#6c756e;line-height:1.6;font-size:14px}
+
+.cards,.contacts{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
+.places{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:30px}
+.cards.three{grid-template-columns:repeat(3,1fr)}
+.info,.place,.contact{background:#fff;border:1px solid #eadfc9;border-radius:8px}
+.info{padding:24px 18px}
+.ico{font-size:28px;color:var(--gold)}
+.info h3{color:var(--green);font-weight:500;margin:10px}
+.info p,.place p{color:#6c756e;line-height:1.65;font-size:14px}
+
+.place{overflow:hidden;text-align:left}
+.visual{height:145px;background:linear-gradient(135deg,#dce9d7,#f5d8c9);display:grid;place-items:center;font-size:52px;color:var(--green)}
+.copy{padding:18px}
+.copy h3{margin:0 0 6px;color:var(--green);font-weight:500;font-size:18px}
+.copy a{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:8px 18px;margin-top:10px;border:1px solid var(--gold);border-radius:21px;color:var(--gold);font:600 13px Arial,sans-serif;text-decoration:none;transition:background-color .15s}
+.copy a:active{background:rgba(184,138,61,.08)}
+
+.location{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:30px}
+.mapbox{min-height:260px;padding:28px;background:linear-gradient(145deg,#eef3e8,#fff1e8);border:1px solid #eadfc9;border-radius:8px;display:grid;place-items:center}
+.pin{font-size:52px;color:var(--rose)}
+
+.contact{padding:18px;display:grid;grid-template-columns:74px 1fr;gap:16px;align-items:center;text-align:left}
+.photo{width:74px;height:74px;border-radius:50%;border:2px solid #e4cfa7;background:linear-gradient(145deg,#e8efdf,#f4d5ce);display:grid;place-items:center;color:var(--green);font-size:26px;font-weight:bold;overflow:hidden;flex-shrink:0}
+.photo img{width:100%;height:100%;object-fit:cover;display:none}
+.name{font-size:19px;color:var(--green);font-weight:600}
+.role{font:12px Arial,sans-serif;color:#80877f;margin:4px 0 10px}
+.contact-actions{display:flex;gap:8px;flex-wrap:wrap}
+.contact-btn{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:8px 16px;border-radius:21px;font:600 13px Arial,sans-serif;text-decoration:none;transition:transform .1s,background-color .15s}
+.contact-btn:active{transform:scale(.97)}
+.contact-btn.call-btn{border:1px solid var(--green);color:var(--green);background:rgba(49,91,68,.06)}
+.contact-btn.wa-btn{border:1px solid #2e8b57;color:#1e7e34;background:rgba(37,211,102,.1)}
+
+.note{font:12px Arial,sans-serif;color:#858d86;margin-top:20px;line-height:1.6}
+.footer{border-top:1px solid #eee1ca;text-align:center;padding:42px 20px;color:#778179}
+.names{font-size:23px;font-style:italic;color:var(--green)}
 .reveal{opacity:0;transform:translateY(18px);transition:.7s}.show{opacity:1;transform:none}
-@media(max-width:760px){.shell{padding:0}.card{border-left:0;border-right:0}.section{padding:48px 18px}.cards.three,.cards,.places,.contacts,.location{grid-template-columns:1fr}.timeline:before{left:20px}.event{grid-template-columns:42px 1fr}.event .dot{grid-column:1;grid-row:1}.event .box{grid-column:2}.event .box:last-child{display:none}.contact{grid-template-columns:70px 1fr}.photo{width:70px;height:70px}}
+
+@media(max-width:760px){
+.shell{padding:0}
+.card{border-left:0;border-right:0;box-shadow:none}
+.section{padding:44px 16px}
+.nav{justify-content:flex-start;padding:8px 14px}
+.nav a{padding:8px 12px;font-size:11.5px}
+.cards.three,.cards,.contacts,.location{grid-template-columns:1fr}
+.places{grid-template-columns:1fr}
+.timeline{margin:24px auto;padding-left:6px}
+.timeline:before{left:25px}
+.event{grid-template-columns:38px 1fr;gap:14px;align-items:flex-start;margin:20px 0}
+.dot{width:38px;height:38px;font-size:16px;margin-top:2px}
+.event .dot{grid-column:1;grid-row:1}
+.event .box{grid-column:2;text-align:left;padding:16px}
+.event .box:last-child{display:none}
+.contact{grid-template-columns:60px 1fr;gap:12px;padding:14px}
+.photo{width:60px;height:60px;font-size:22px}
+}
+
+@media(max-width:480px){
+.actions{flex-direction:column;align-items:stretch}
+.actions .btn{width:100%}
+.contact-actions{gap:6px}
+.contact-btn{flex:1 1 calc(50% - 4px);padding:8px 10px;font-size:12.5px}
+}
 </style>
 </head>
 <body><div class="shell"><div class="card">
@@ -40,7 +119,7 @@ h1{font-size:clamp(42px,7vw,78px);font-weight:500;font-style:italic;color:var(--
 
 <nav class="nav"><a href="#welcome">Welcome</a><a href="#schedule">Schedule</a><a href="#venue">Venue</a><a href="#warangal">Warangal</a><a href="#contacts">Contacts</a></nav>
 
-<section class="section reveal" id="welcome"><div class="eyebrow">Two heartss · One beautiful beginning</div><div class="orn">✦ ❀ ✦</div>
+<section class="section reveal" id="welcome"><div class="eyebrow">Two hearts · One beautiful beginning</div><div class="orn">✦ ❀ ✦</div>
 <p class="lead">With joyful hearts, we invite you to celebrate our wedding. Come for the ceremony, stay for the food, laughter, blessings and memories.</p>
 <div class="actions"><a class="btn primary" href="#schedule">See the celebrations</a><a class="btn gold" href="#venue">Venue details</a></div></section>
 
@@ -69,15 +148,15 @@ h1{font-size:clamp(42px,7vw,78px);font-weight:500;font-style:italic;color:var(--
 <section class="section reveal" id="contacts"><h2>Need Any Assistance?</h2>
 <p class="lead">For directions, accommodation, transport or any wedding-related help, please reach out.</p>
 <div class="contacts">
-<div class="contact"><div class="photo"><img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Sai Bhaskar"><span>S</span></div><div><div class="name">Sai Bhaskar</div><div class="role">Wedding Assistance</div><a href="tel:+919876543210">☎ Call</a><a href="https://wa.me/919876543210">WhatsApp</a></div></div>
-<div class="contact"><div class="photo"><img src="https://randomuser.me/api/portraits/men/52.jpg" alt="Ram Trinadh"><span>R</span></div><div><div class="name">Ram Trinadh</div><div class="role">Guest Assistance</div><a href="tel:+919812345678">☎ Call</a><a href="https://wa.me/919812345678">WhatsApp</a></div></div>
-<div class="contact"><div class="photo"><img src="https://randomuser.me/api/portraits/men/75.jpg" alt="P. Sunny"><span>P</span></div><div><div class="name">P. Sunny</div><div class="role">Travel & Venue Assistance</div><a href="tel:+919845612307">☎ Call</a><a href="https://wa.me/919845612307">WhatsApp</a></div></div>
+<div class="contact"><div class="photo"><img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Sai Bhaskar"><span>S</span></div><div><div class="name">Sai Bhaskar</div><div class="role">Wedding Assistance</div><div class="contact-actions"><a class="contact-btn call-btn" href="tel:+919876543210">☎ Call</a><a class="contact-btn wa-btn" href="https://wa.me/919876543210" target="_blank">WhatsApp</a></div></div></div>
+<div class="contact"><div class="photo"><img src="https://randomuser.me/api/portraits/men/52.jpg" alt="Ram Trinadh"><span>R</span></div><div><div class="name">Ram Trinadh</div><div class="role">Guest Assistance</div><div class="contact-actions"><a class="contact-btn call-btn" href="tel:+919812345678">☎ Call</a><a class="contact-btn wa-btn" href="https://wa.me/919812345678" target="_blank">WhatsApp</a></div></div></div>
+<div class="contact"><div class="photo"><img src="https://randomuser.me/api/portraits/men/75.jpg" alt="P. Sunny"><span>P</span></div><div><div class="name">P. Sunny</div><div class="role">Travel & Venue Assistance</div><div class="contact-actions"><a class="contact-btn call-btn" href="tel:+919845612307">☎ Call</a><a class="contact-btn wa-btn" href="https://wa.me/919845612307" target="_blank">WhatsApp</a></div></div></div>
 </div>
 <p class="note">The photos above are temporary random placeholders. Replace the image URLs in <b>index.html</b> with your own photos whenever you're ready. The phone numbers are also temporary placeholders.</p></section>
 
 <section class="section reveal"><h2>One More Thing…</h2><div class="orn">❀ ✦ ❀</div><p class="lead">Your presence is the most precious gift. Come celebrate with us, bless us, eat well and make wonderful memories together.</p></section>
 
-<!-- <footer class="footer"><div class="names">Abhiram weds Vyshnavi</div><div style="font:11px Arial;letter-spacing:.16em;margin-top:12px">20 · NOVEMBER · 2026</div><div style="margin-top:10px">Formal invite to follow ♡</div></footer> -->
+<footer class="footer"><div class="names">Abhiram weds Vyshnavi</div><div style="font:11px Arial,sans-serif;letter-spacing:.16em;margin-top:12px">20 · NOVEMBER · 2026</div><div style="margin-top:10px;font-size:13px;color:#858d86">GRB Convention Hall · Girnibavi, Warangal</div></footer>
 </div></div>
 <script>
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.1});
