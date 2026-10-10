@@ -16,7 +16,7 @@ body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.13;ba
 /* Hero & Card Display */
 .hero{text-align:center;padding:16px 12px}
 .hero-img-wrap{position:relative;display:inline-block;cursor:pointer;border-radius:8px;overflow:hidden;max-width:min(100%,820px);margin:auto}
-.hero-img-wrap img{display:block;width:100%;height:auto;aspect-ratio:1056/1489;border-radius:8px;transition:transform .3s}
+.hero-img-wrap img{display:block;width:100%;height:auto;aspect-ratio:1672/940;border-radius:8px;transition:transform .3s}
 .hero-img-wrap:hover img{transform:scale(1.01)}
 .img-zoom-hint{position:absolute;bottom:12px;right:12px;background:rgba(49,91,68,.85);color:#fff;padding:6px 14px;border-radius:20px;font:600 11px Arial,sans-serif;backdrop-filter:blur(4px);pointer-events:none;letter-spacing:.04em}
 .card-actions{display:flex;justify-content:center;gap:10px;margin-top:12px;flex-wrap:wrap}
@@ -150,13 +150,13 @@ h1{font-size:clamp(36px,7vw,78px);font-weight:500;font-style:italic;color:var(--
 
 <section class="hero">
   <div class="hero-img-wrap" onclick="openLightbox()">
-    <img id="heroImage" src="wedding-template.png" alt="Abhiram weds Vyshnavi"
+    <img id="heroImage" src="wedding-template-new.png" alt="Abhiram weds Vyshnavi"
       onerror="this.style.display='none';document.querySelector('.fallback').style.display='block'">
     <div class="img-zoom-hint"><span>🔍 Tap to view full size</span></div>
   </div>
   <div class="card-actions">
     <button class="chip-btn" onclick="openLightbox()">🔍 Full View</button>
-    <a id="downloadCardBtn" class="chip-btn" href="wedding-template.png" download="Abhiram_Vyshnavi_Wedding_Invite.png">⬇ Download Invite</a>
+    <a id="downloadCardBtn" class="chip-btn" href="wedding-template-new.png" download="Abhiram_Vyshnavi_Wedding_Invite.png">⬇ Download Invite</a>
   </div>
   <div class="fallback"><div class="eyebrow">Save the Date</div><h1>Abhiram <span class="weds">weds</span> Vyshnavi</h1><div class="date">Friday, Nov 20 at 9:39 AM</div><div class="venue">GRB Convention Hall · Girnibavi, Warangal</div></div>
 </section>
@@ -246,9 +246,9 @@ h1{font-size:clamp(36px,7vw,78px);font-weight:500;font-style:italic;color:var(--
 <div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
   <div class="lightbox-content">
     <button class="lightbox-close" onclick="closeLightbox(event)">✕</button>
-    <img id="lightboxImg" src="wedding-template.png" alt="Abhiram weds Vyshnavi full invite">
+    <img id="lightboxImg" src="wedding-template-new.png" alt="Abhiram weds Vyshnavi full invite">
     <div class="lightbox-bar">
-      <a id="lightboxDownload" class="btn primary" href="wedding-template.png" download="Abhiram_Vyshnavi_Wedding_Invite.png">⬇ Download High-Res Invite</a>
+      <a id="lightboxDownload" class="btn primary" href="wedding-template-new.png" download="Abhiram_Vyshnavi_Wedding_Invite.png">⬇ Download High-Res Invite</a>
     </div>
   </div>
 </div>
