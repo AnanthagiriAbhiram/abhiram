@@ -12,8 +12,17 @@ body{margin:0;overflow-x:hidden;width:100%;background:linear-gradient(#fbf4e7,#f
 body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.13;background-image:radial-gradient(#b88a3d .6px,transparent .7px);background-size:19px 19px}
 .shell{max-width:1120px;margin:auto;padding:18px}
 .card{background:rgba(255,253,248,.96);border:1px solid #eadcc3;box-shadow:0 25px 80px rgba(67,48,27,.13);overflow:hidden}
-.hero{text-align:center;padding:12px}
-.hero img{display:block;width:min(100%,820px);height:auto;aspect-ratio:1056/1489;margin:auto;border-radius:6px}
+
+/* Hero & Card Display */
+.hero{text-align:center;padding:16px 12px}
+.hero-img-wrap{position:relative;display:inline-block;cursor:pointer;border-radius:8px;overflow:hidden;max-width:min(100%,820px);margin:auto}
+.hero-img-wrap img{display:block;width:100%;height:auto;aspect-ratio:1056/1489;border-radius:8px;transition:transform .3s}
+.hero-img-wrap:hover img{transform:scale(1.01)}
+.img-zoom-hint{position:absolute;bottom:12px;right:12px;background:rgba(49,91,68,.85);color:#fff;padding:6px 14px;border-radius:20px;font:600 11px Arial,sans-serif;backdrop-filter:blur(4px);pointer-events:none;letter-spacing:.04em}
+.card-actions{display:flex;justify-content:center;gap:10px;margin-top:12px;flex-wrap:wrap}
+.chip-btn{display:inline-flex;align-items:center;justify-content:center;min-height:38px;padding:6px 16px;border:1px solid var(--gold);background:#fffdf8;color:var(--green);border-radius:20px;font:600 12px Arial,sans-serif;text-decoration:none;cursor:pointer;transition:background-color .15s}
+.chip-btn:hover,.chip-btn:active{background:rgba(184,138,61,.12)}
+
 .fallback{display:none;padding:70px 20px}
 .eyebrow{font:12px Arial,sans-serif;letter-spacing:.25em;text-transform:uppercase;color:var(--gold)}
 h1{font-size:clamp(36px,7vw,78px);font-weight:500;font-style:italic;color:var(--green);margin:12px 0}
@@ -21,23 +30,33 @@ h1{font-size:clamp(36px,7vw,78px);font-weight:500;font-style:italic;color:var(--
 .date{font-size:clamp(18px,4.5vw,24px);color:var(--green);margin:12px 0}
 .venue{font-size:clamp(15px,3.8vw,18px);color:#637066}
 
+/* Navigation */
 .nav{position:sticky;top:0;z-index:20;background:#fffdf8fa;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-block:1px solid #eee1ca;display:flex;justify-content:center;align-items:center;gap:6px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;-ms-overflow-style:none;padding:8px 12px}
 .nav::-webkit-scrollbar{display:none}
 .nav a{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:8px 14px;text-decoration:none;font:600 12px Arial,sans-serif;color:var(--green);white-space:nowrap;text-transform:uppercase;letter-spacing:.06em;border-radius:21px;transition:background-color .15s,color .15s}
 .nav a:hover,.nav a:active{background:rgba(49,91,68,.08)}
 
+/* Sections */
 .section{padding:60px 22px;text-align:center;max-width:980px;margin:auto;scroll-margin-top:62px}
 .section h2{color:var(--green);font-weight:500;letter-spacing:.05em;font-size:clamp(24px,5vw,34px);margin:0 0 10px}
 .section h2:after{content:"";display:block;width:72px;height:1px;background:var(--gold);margin:13px auto}
 .lead{max-width:700px;margin:auto;line-height:1.8;color:#68736b;font-size:clamp(15px,3.8vw,17px)}
 .orn{color:var(--gold);font-size:21px;margin:10px}
 
+
+
+.friend-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin:24px auto 0;max-width:760px}
+.friend-chip{background:linear-gradient(145deg,#fffdf9,#fbf6eb);border:1px solid #e5d7bd;border-radius:24px;padding:12px 18px;font-size:15px;font-weight:600;color:var(--green);box-shadow:0 3px 10px rgba(0,0,0,.03);display:flex;align-items:center;justify-content:center;gap:8px;letter-spacing:.02em}
+.friend-chip span{color:var(--gold);font-size:16px}
+
+/* Actions & Buttons */
 .actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:24px}
-.btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:12px 24px;border:1px solid var(--green);border-radius:30px;text-decoration:none;font:600 14px Arial,sans-serif;color:var(--green);transition:transform .1s,background-color .15s}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:12px 24px;border:1px solid var(--green);border-radius:30px;text-decoration:none;font:600 14px Arial,sans-serif;color:var(--green);transition:transform .1s,background-color .15s;cursor:pointer}
 .btn:active{transform:scale(.98)}
 .btn.primary{background:var(--green);color:#fff}
 .btn.gold{border-color:var(--gold);color:#8b682e;background:rgba(184,138,61,.06)}
 
+/* Timeline */
 .timeline{max-width:760px;margin:30px auto;position:relative}
 .timeline:before{content:"";position:absolute;left:50%;top:0;bottom:0;width:1px;background:#dfcda8}
 .event{display:grid;grid-template-columns:1fr 60px 1fr;align-items:center;margin:24px 0}
@@ -46,6 +65,7 @@ h1{font-size:clamp(36px,7vw,78px);font-weight:500;font-style:italic;color:var(--
 .box h3{margin:0 0 6px;color:var(--green);font-weight:500;font-size:18px}
 .box p{margin:0;color:#6c756e;line-height:1.6;font-size:14px}
 
+/* Cards & Grid */
 .cards,.contacts{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
 .places{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:30px}
 .cards.three{grid-template-columns:repeat(3,1fr)}
@@ -55,17 +75,20 @@ h1{font-size:clamp(36px,7vw,78px);font-weight:500;font-style:italic;color:var(--
 .info h3{color:var(--green);font-weight:500;margin:10px}
 .info p,.place p{color:#6c756e;line-height:1.65;font-size:14px}
 
+/* Places */
 .place{overflow:hidden;text-align:left}
-.visual{height:145px;background:linear-gradient(135deg,#dce9d7,#f5d8c9);display:grid;place-items:center;font-size:52px;color:var(--green)}
-.copy{padding:18px}
+.visual{height:100px;background:linear-gradient(135deg,#dce9d7,#f5d8c9);display:grid;place-items:center;font-size:48px;color:var(--green)}
+.copy{padding:12px}
 .copy h3{margin:0 0 6px;color:var(--green);font-weight:500;font-size:18px}
 .copy a{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:8px 18px;margin-top:10px;border:1px solid var(--gold);border-radius:21px;color:var(--gold);font:600 13px Arial,sans-serif;text-decoration:none;transition:background-color .15s}
 .copy a:active{background:rgba(184,138,61,.08)}
 
+/* Location */
 .location{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:30px}
 .mapbox{min-height:260px;padding:28px;background:linear-gradient(145deg,#eef3e8,#fff1e8);border:1px solid #eadfc9;border-radius:8px;display:grid;place-items:center}
 .pin{font-size:52px;color:var(--rose)}
 
+/* Contacts */
 .contact{padding:18px;display:grid;grid-template-columns:74px 1fr;gap:16px;align-items:center;text-align:left}
 .photo{width:74px;height:74px;border-radius:50%;border:2px solid #e4cfa7;background:linear-gradient(145deg,#e8efdf,#f4d5ce);display:grid;place-items:center;color:var(--green);font-size:26px;font-weight:bold;overflow:hidden;flex-shrink:0}
 .photo img{width:100%;height:100%;object-fit:cover;display:none}
@@ -76,6 +99,18 @@ h1{font-size:clamp(36px,7vw,78px);font-weight:500;font-style:italic;color:var(--
 .contact-btn:active{transform:scale(.97)}
 .contact-btn.call-btn{border:1px solid var(--green);color:var(--green);background:rgba(49,91,68,.06)}
 .contact-btn.wa-btn{border:1px solid #2e8b57;color:#1e7e34;background:rgba(37,211,102,.1)}
+
+/* Lightbox Modal */
+.lightbox{position:fixed;inset:0;background:rgba(20,28,24,.88);backdrop-filter:blur(6px);z-index:999;display:none;place-items:center;padding:20px;opacity:0;transition:opacity .25s}
+.lightbox.open{display:grid;opacity:1}
+.lightbox-content{position:relative;max-width:92vw;max-height:92vh;display:flex;flex-direction:column;align-items:center}
+.lightbox-content img{max-width:100%;max-height:80vh;object-fit:contain;border-radius:8px;box-shadow:0 20px 60px rgba(0,0,0,.4)}
+.lightbox-close{position:absolute;top:-42px;right:0;background:transparent;border:0;color:#fff;font-size:32px;cursor:pointer;padding:4px 12px;line-height:1}
+.lightbox-bar{margin-top:14px}
+
+/* Toast */
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--green);color:#fff;padding:12px 24px;border-radius:30px;font:600 13px Arial,sans-serif;box-shadow:0 10px 30px rgba(0,0,0,.25);z-index:999;opacity:0;pointer-events:none;transition:all .3s}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
 
 .note{font:12px Arial,sans-serif;color:#858d86;margin-top:20px;line-height:1.6}
 .footer{border-top:1px solid #eee1ca;text-align:center;padding:42px 20px;color:#778179}
@@ -106,34 +141,79 @@ h1{font-size:clamp(36px,7vw,78px);font-weight:500;font-style:italic;color:var(--
 .actions .btn{width:100%}
 .contact-actions{gap:6px}
 .contact-btn{flex:1 1 calc(50% - 4px);padding:8px 10px;font-size:12.5px}
+.countdown-grid{gap:6px}
+.countdown-item{padding:10px 4px}
 }
 </style>
 </head>
 <body><div class="shell"><div class="card">
 
 <section class="hero">
-<img src="wedding-template.png" alt="Abhiram weds Vyshnavi"
- onerror="this.style.display='none';document.querySelector('.fallback').style.display='block'">
-<div class="fallback"><div class="eyebrow">Save the Date</div><h1>Abhiram <span class="weds">weds</span> Vyshnavi</h1><div class="date">Friday, Nov 20 at 9:39 AM</div><div class="venue">GRB Convention Hall · Girnibavi, Warangal</div></div>
+  <div class="hero-img-wrap" onclick="openLightbox()">
+    <img id="heroImage" src="wedding-template.png" alt="Abhiram weds Vyshnavi"
+      onerror="this.style.display='none';document.querySelector('.fallback').style.display='block'">
+    <div class="img-zoom-hint"><span>🔍 Tap to view full size</span></div>
+  </div>
+  <div class="card-actions">
+    <button class="chip-btn" onclick="openLightbox()">🔍 Full View</button>
+    <a id="downloadCardBtn" class="chip-btn" href="wedding-template.png" download="Abhiram_Vyshnavi_Wedding_Invite.png">⬇ Download Invite</a>
+  </div>
+  <div class="fallback"><div class="eyebrow">Save the Date</div><h1>Abhiram <span class="weds">weds</span> Vyshnavi</h1><div class="date">Friday, Nov 20 at 9:39 AM</div><div class="venue">GRB Convention Hall · Girnibavi, Warangal</div></div>
 </section>
 
-<nav class="nav"><a href="#welcome">Welcome</a><a href="#schedule">Schedule</a><a href="#venue">Venue</a><a href="#warangal">Warangal</a><a href="#contacts">Contacts</a></nav>
+<nav class="nav"><a href="#welcome">Welcome</a><a href="#schedule">Schedule</a><a href="#venue">Venue</a><a href="#warangal">Warangal</a><a href="#friends">Help & Friends</a></nav>
 
-<section class="section reveal" id="welcome"><div class="eyebrow">Two hearts · One beautiful beginning</div><div class="orn">✦ ❀ ✦</div>
-<p class="lead">With joyful hearts, we invite you to celebrate our wedding. Come for the ceremony, stay for the food, laughter, blessings and memories.</p>
-<div class="actions"><a class="btn primary" href="#schedule">See the celebrations</a><a class="btn gold" href="#venue">Venue details</a></div></section>
+<section class="section reveal" id="welcome">
+  <div class="eyebrow">Two hearts · One beautiful beginning</div>
+  <div class="orn">✦ ❀ ✦</div>
+  <p class="lead">With joyful hearts, we invite you to celebrate our wedding. Come for the ceremony, stay for the food, laughter, blessings and memories.</p>
+  
+
+
+  <div class="actions">
+    <a class="btn primary" href="#schedule">See the celebrations</a>
+    <a class="btn gold" target="_blank" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Abhiram+weds+Vyshnavi+-+Wedding+%26+Reception&dates=20261120T040900Z/20261120T093000Z&details=Wedding+ceremony+of+Abhiram+%26+Vyshnavi+at+9%3A39+AM+followed+by+Lunch+and+Reception+at+GRB+Convention+Hall%2C+Girnibavi%2C+Warangal.&location=GRB+Convention+Hall%2C+Girnibavi%2C+Warangal%2C+Telangana">📅 Add to Google Calendar</a>
+    
+  </div>
+</section>
 
 <section class="section reveal" id="schedule"><h2>The Celebrations</h2><div class="orn">❦</div>
 <div class="timeline">
-<div class="event"><div class="box"><h3>Wedding Ceremony</h3><p>Friday · 20 November 2026<br><b>9:39 AM</b><br>GRB Convention Hall, Girnibavi</p></div><div class="dot">ॐ</div><div></div></div>
+<div class="event"><div class="box"><h3>Wedding Ceremony (Sumuhurtham)</h3><p>Friday · 20 November 2026<br><b>9:39 AM</b><br>GRB Convention Hall, Girnibavi</p></div><div class="dot">ॐ</div><div></div></div>
 <div class="event"><div class="box"><h3>Lunch Follows</h3><p><b>12:00 PM</b><br>Join us for lunch and continue the celebrations with family and friends.</p></div><div class="dot">❀</div><div></div></div>
 <div class="event"><div class="box"><h3>Reception</h3><p><b>Starts at 12:00 PM</b><br>Same day at GRB Convention Hall, Girnibavi.</p></div><div class="dot">✦</div><div></div></div>
 </div></section>
-
 <section class="section reveal" id="venue"><h2>Venue & Travel</h2>
-<div class="location"><div class="mapbox"><div><div class="pin">⌖</div><h3 style="color:var(--green)">GRB Convention Hall</h3><p>Girnibavi, Warangal, Telangana</p>
-<a class="btn primary" target="_blank" href="https://www.google.com/maps/search/?api=1&query=GRB+Convention+Hall+Girnibavi+Warangal">Open GRB Girnibavi in Google Maps</a></div></div>
-<div class="info" style="display:grid;place-items:center"><div><div class="ico">✧</div><h3>Travel Note</h3><p>Travelling from outside Warangal? Contact the wedding assistance numbers below for help with directions, transport and local arrangements.</p></div></div></div></section>
+<div class="location-single" style="max-width:680px;margin:28px auto 0">
+  <div class="mapbox" style="padding:28px 20px">
+    <div>
+      <div class="pin" style="font-size:46px">⌖</div>
+      <div class="eyebrow" style="margin-top:6px">Marriage Function Hall</div>
+      <h3 style="color:var(--green);margin:6px 0 4px;font-size:24px">GRB Convention Hall</h3>
+      <p style="margin:4px 0 16px;color:#637066">Girnibavi, Warangal, Telangana</p>
+      <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
+        <a class="btn primary" target="_blank" href="https://www.google.com/maps/search/?api=1&query=GRB+Convention+Hall+Girnibavi+Warangal">Open in Google Maps ↗</a>
+        <button class="btn gold" onclick="copyAddress(this, 'GRB Convention Hall, Girnibavi, Warangal, Telangana')">📋 Copy Address</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="hotel-compact" style="max-width:680px;margin:20px auto 0;background:linear-gradient(145deg,#fffdf9,#fcf8f0);border:1px solid #ebdcc5;border-radius:12px;padding:16px 20px;text-align:left;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
+  <div style="display:flex;align-items:center;gap:14px">
+    <div style="font-size:26px;color:var(--gold);line-height:1">🏨</div>
+    <div>
+      <div style="font:600 11px Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)">Guest Accommodation</div>
+      <div style="font-size:16px;font-weight:600;color:var(--green);margin-top:2px">Hotel Grand Inn</div>
+      <div style="font-size:13px;color:#6c756e;margin-top:2px">Near Warangal Railway Station (for outstation guests)</div>
+    </div>
+  </div>
+  <div style="display:flex;gap:8px;flex-wrap:wrap">
+    <a class="chip-btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Hotel+Grand+Inn+Warangal+Railway+Station">Directions ↗</a>
+    <button class="chip-btn" onclick="copyAddress(this, 'Hotel Grand Inn, Near Warangal Railway Station, Warangal, Telangana')">📋 Copy</button>
+  </div>
+</div>
+</section>
 
 <section class="section reveal" id="warangal"><h2>While You're in Warangal</h2>
 <p class="lead">Make a little time to explore the Kakatiya heritage and nearby attractions.</p>
@@ -145,21 +225,75 @@ h1{font-size:clamp(36px,7vw,78px);font-weight:500;font-style:italic;color:var(--
 </div>
 <div class="actions"><a class="btn gold" target="_blank" href="https://tourism.telangana.gov.in/destinations/warangal">Explore Telangana Tourism</a></div></section>
 
-<section class="section reveal" id="contacts"><h2>Need Any Assistance?</h2>
-<p class="lead">For directions, accommodation, transport or any wedding-related help, please reach out.</p>
-<div class="contacts">
-<div class="contact"><div class="photo"><img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Sai Bhaskar"><span>S</span></div><div><div class="name">Sai Bhaskar</div><div class="role">Wedding Assistance</div><div class="contact-actions"><a class="contact-btn call-btn" href="tel:+919876543210">☎ Call</a><a class="contact-btn wa-btn" href="https://wa.me/919876543210" target="_blank">WhatsApp</a></div></div></div>
-<div class="contact"><div class="photo"><img src="https://randomuser.me/api/portraits/men/52.jpg" alt="Ram Trinadh"><span>R</span></div><div><div class="name">Ram Trinadh</div><div class="role">Guest Assistance</div><div class="contact-actions"><a class="contact-btn call-btn" href="tel:+919812345678">☎ Call</a><a class="contact-btn wa-btn" href="https://wa.me/919812345678" target="_blank">WhatsApp</a></div></div></div>
-<div class="contact"><div class="photo"><img src="https://randomuser.me/api/portraits/men/75.jpg" alt="P. Sunny"><span>P</span></div><div><div class="name">P. Sunny</div><div class="role">Travel & Venue Assistance</div><div class="contact-actions"><a class="contact-btn call-btn" href="tel:+919845612307">☎ Call</a><a class="contact-btn wa-btn" href="https://wa.me/919845612307" target="_blank">WhatsApp</a></div></div></div>
-</div>
-<p class="note">The photos above are temporary random placeholders. Replace the image URLs in <b>index.html</b> with your own photos whenever you're ready. The phone numbers are also temporary placeholders.</p></section>
-
-<section class="section reveal"><h2>One More Thing…</h2><div class="orn">❀ ✦ ❀</div><p class="lead">Your presence is the most precious gift. Come celebrate with us, bless us, eat well and make wonderful memories together.</p></section>
+<section class="section reveal" id="friends">
+  <h2>Quick Help & Friends</h2>
+  <div class="orn">✦ ❀ ✦</div>
+  <p class="lead">For any quick help, guidance or directions during the celebrations, feel free to reach out to anyone you know among our friends below:</p>
+  <div class="friend-grid">
+    <div class="friend-chip"><span>✨</span> Sai Bhaskar</div>
+    <div class="friend-chip"><span>✨</span> Ram Trinadh</div>
+    <div class="friend-chip"><span>✨</span> Sunny</div>
+    <div class="friend-chip"><span>✨</span> Akhil</div>
+    <div class="friend-chip"><span>✨</span> Vamshi</div>
+  </div>
+  <p class="note" style="text-align:center;margin-top:20px;font-size:13px;color:#7a837c">You can reach out directly to anyone you are familiar with for quick assistance at the venue.</p>
+</section>
 
 <footer class="footer"><div class="names">Abhiram weds Vyshnavi</div><div style="font:11px Arial,sans-serif;letter-spacing:.16em;margin-top:12px">20 · NOVEMBER · 2026</div><div style="margin-top:10px;font-size:13px;color:#858d86">GRB Convention Hall · Girnibavi, Warangal</div></footer>
 </div></div>
+
+<!-- Lightbox Modal -->
+<div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
+  <div class="lightbox-content">
+    <button class="lightbox-close" onclick="closeLightbox(event)">✕</button>
+    <img id="lightboxImg" src="wedding-template.png" alt="Abhiram weds Vyshnavi full invite">
+    <div class="lightbox-bar">
+      <a id="lightboxDownload" class="btn primary" href="wedding-template.png" download="Abhiram_Vyshnavi_Wedding_Invite.png">⬇ Download High-Res Invite</a>
+    </div>
+  </div>
+</div>
+
+<!-- Toast -->
+<div id="toast" class="toast">Address copied!</div>
+
 <script>
+// Intersection Observer for scroll animation
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.1});
 document.querySelectorAll('.reveal').forEach(x=>io.observe(x));
+
+
+
+// Lightbox
+function openLightbox(){
+  const lb = document.getElementById('lightbox');
+  lb.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox(e){
+  if(e.target.id === 'lightbox' || e.target.classList.contains('lightbox-close')){
+    const lb = document.getElementById('lightbox');
+    lb.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+}
+
+// Copy Address
+function copyAddress(btn, addressText){
+  const addr = addressText || "GRB Convention Hall, Girnibavi, Warangal, Telangana";
+  navigator.clipboard.writeText(addr).then(() => {
+    showToast("Address copied to clipboard! 📋");
+    const orig = btn.innerHTML;
+    btn.innerHTML = "✓ Address Copied!";
+    setTimeout(() => { btn.innerHTML = orig; }, 2500);
+  });
+}
+
+// Toast
+function showToast(msg){
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => { t.classList.remove('show'); }, 3000);
+}
 </script>
 </body></html>
